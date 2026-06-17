@@ -32,3 +32,17 @@ def count_chunks():
     collection = get_collection()
 
     return collection.count()
+
+def search(
+    query_embedding,
+    n_results=3
+):
+
+    collection = get_collection()
+
+    results = collection.query(
+        query_embeddings=[query_embedding],
+        n_results=n_results
+    )
+
+    return results

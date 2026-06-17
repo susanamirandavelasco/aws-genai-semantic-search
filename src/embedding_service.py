@@ -18,3 +18,4 @@ def generate_embedding(text: str):
     )
 
     return response.data[0].embedding
+
