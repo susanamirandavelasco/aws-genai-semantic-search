@@ -16,7 +16,8 @@ def get_collection():
 def add_chunk(
     chunk_id: str,
     chunk_text: str,
-    embedding: list[float]
+    embedding: list[float],
+    metadata
 ):
 
     collection = get_collection()
@@ -24,7 +25,8 @@ def add_chunk(
     collection.add(
         ids=[chunk_id],
         documents=[chunk_text],
-        embeddings=[embedding]
+        embeddings=[embedding],
+        metadatas=[metadata]
     )
 
 def count_chunks():

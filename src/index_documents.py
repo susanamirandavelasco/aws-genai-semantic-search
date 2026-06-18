@@ -7,8 +7,8 @@ print("Leyendo PDF...")
 
 text = load_pdf_pages(
     "data/aws_docs/bedrock-ug.pdf",
-    start_page=21,
-    end_page=26
+    start_page=2500,
+    end_page=2900
 )
 
 print("Generando chunks...")
@@ -26,7 +26,11 @@ for index, chunk in enumerate(chunks):
     add_chunk(
         chunk_id=f"chunk_{index}",
         chunk_text=chunk,
-        embedding=embedding
+        embedding=embedding,
+        metadata = {
+            "source": "bedrock-ug.pdf",
+            "chunk_number": index
+        }
     )
 
 print("Indexación completada")
