@@ -157,6 +157,8 @@ Example queries:
 - Build simple UI (optional)
 
 ---
+---
+---
 
 ## Author Notes
 
@@ -164,3 +166,59 @@ This project was built as a hands-on exploration of:
 embeddings, vector databases, and semantic search fundamentals
 
 The goal was to deeply understand how retrieval systems work under the hood before building full RAG pipelines.
+
+## What I Learned
+
+Building this project helped me move from understanding semantic search concepts theoretically to understanding how they work in practice.
+
+### 1. Embeddings represent meaning, not keywords
+
+Before this project, I understood embeddings conceptually.
+
+After implementing the full pipeline, I observed how semantically related questions retrieve similar chunks even when they do not share exact keywords.
+
+### 2. Retrieval quality depends heavily on the corpus
+
+The retrieval system worked correctly even when the results were not useful.
+
+This taught me that retrieval quality is not only about embeddings or vector databases. The quality and relevance of the indexed content are equally important.
+
+### 3. Ranking is based on vector similarity
+
+Different questions often retrieved the same group of chunks, but in a different order.
+
+This helped me understand how semantic ranking works and how small differences in query intent affect retrieval results.
+
+### 4. Chunking is a critical design decision
+
+The way documents are split directly impacts retrieval quality.
+
+Chunk size influences what information is retrieved and how much context is available to downstream systems.
+
+### 5. Vector databases always return the closest match
+
+Even when asking questions completely unrelated to the indexed content, the system still returned results.
+
+This highlighted the need for relevance thresholds and evaluation strategies in production Retrieval and RAG systems.
+
+### 6. Retrieval is the foundation of RAG
+
+Implementing semantic search from scratch provided a much deeper understanding of the Retrieval component that powers modern Retrieval-Augmented Generation (RAG) applications.
+
+---
+
+## Interesting Findings
+
+### The "Oaxaca Cheese" Experiment
+
+When querying:
+
+"What is Oaxaca cheese?"
+
+the system still returned results from the AWS Bedrock documentation.
+
+This was not a bug.
+
+The vector database correctly returned the closest chunks available in the corpus, even though they were not relevant to the question.
+
+This experiment helped me understand why production Retrieval and RAG systems often implement relevance thresholds before returning results to users.
