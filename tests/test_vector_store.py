@@ -1,4 +1,4 @@
-from vector_store import get_collection
+from src.vector_store import get_collection
 
 collection = get_collection()
 

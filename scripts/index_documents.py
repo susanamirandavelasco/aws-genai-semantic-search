@@ -1,7 +1,7 @@
-from document_loader import load_pdf_pages
-from chunker import chunk_text
-from embedding_service import generate_embedding
-from vector_store import add_chunk
+from src.document_loader import load_pdf_pages
+from src.chunker import chunk_text
+from src.embedding_service import generate_embedding
+from src.vector_store import add_chunk
 
 print("Leyendo PDF...")
 

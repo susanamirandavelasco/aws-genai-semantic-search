@@ -1,4 +1,4 @@
-from document_loader import load_pdf_pages, get_pdf_page_count
+from src.document_loader import load_pdf_pages, get_pdf_page_count
 
 PDF_PATH = "data/aws_docs/bedrock-ug.pdf"
 

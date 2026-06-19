@@ -1,5 +1,5 @@
-from document_loader import load_pdf_pages
-from chunker import chunk_text
+from src.document_loader import load_pdf_pages
+from src.chunker import chunk_text
 
 text = load_pdf_pages(
     "data/aws_docs/bedrock-ug.pdf",

@@ -1,4 +1,4 @@
-from embedding_service import generate_embedding
+from src.embedding_service import generate_embedding
 from math import sqrt
 
 

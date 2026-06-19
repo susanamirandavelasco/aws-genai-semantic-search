@@ -1,5 +1,5 @@
-from embedding_service import generate_embedding
-from vector_store import search
+from src.embedding_service import generate_embedding
+from src.vector_store import search
 
 
 def semantic_search(
