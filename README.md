@@ -83,7 +83,8 @@ bedrock-ug.pdf
 
 chroma_db/
 
---
+```
+---
 
 ## How to Run
 
@@ -110,9 +111,10 @@ What are Knowledge Bases?
 What is multimodal content?
 How does retrieval work?
 
---
+---
 
 ## Key Learnings
+
 Embeddings represent meaning, not keywords
 Vector similarity enables semantic search
 Chunking strategy affects retrieval quality
