@@ -106,6 +106,16 @@ chroma_db/
 ```
 ---
 
+## Dataset
+
+Download the AWS Bedrock User Guide PDF and place it in:
+
+```
+data/aws_docs/bedrock-ug.pdf
+```
+
+---
+
 ## How to Run
 
 1. Install dependencies
@@ -156,7 +166,6 @@ Example queries:
 - Improve metadata granularity (page-level tracking)
 - Build simple UI (optional)
 
----
 ---
 ---
 
