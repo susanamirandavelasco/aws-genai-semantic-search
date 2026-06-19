@@ -21,19 +21,39 @@ Build a minimal end-to-end **Retrieval system (R in RAG)** to understand:
 
 ## Architecture
 
-PDF Document (AWS Bedrock Guide)
-↓
-Text Extraction
-↓
-Chunking (500 words)
-↓
-OpenAI Embeddings
-↓
-ChromaDB (Vector Store)
-↓
-Semantic Search (Top-K Retrieval)
-↓
-Relevant Text Chunks
+```text
+AWS Bedrock PDF
+        │
+        ▼
+ Document Loader
+        │
+        ▼
+    Chunking
+ (500-word chunks)
+        │
+        ▼
+ OpenAI Embeddings
+        │
+        ▼
+     ChromaDB
+  (Vector Store)
+        │
+        ▼
+ Semantic Search
+        │
+        ▼
+ Top-K Results
+ + Metadata
+```
+
+The system follows a Retrieval pipeline:
+
+1. Extract text from AWS Bedrock documentation.
+2. Split content into chunks.
+3. Generate embeddings using OpenAI.
+4. Store vectors in ChromaDB.
+5. Convert user queries into embeddings.
+6. Retrieve the most semantically similar chunks.
 
 
 ---
