@@ -14,16 +14,23 @@ def semantic_search(
         n_results=n_results
     )
 
+    print(results["metadatas"])
+
     return results
 
 def display_results(results):
 
     for i, doc in enumerate(results["documents"][0]):
+        metadata = results["metadatas"][0][i]
 
         print("\n")
         print("=" * 80)
 
         print(f"RESULT {i+1}")
+
+        print(f"Source: {metadata['source']}")
+
+        print(f"Chunk: {metadata['chunk_number']}")
 
         print("=" * 80)
 

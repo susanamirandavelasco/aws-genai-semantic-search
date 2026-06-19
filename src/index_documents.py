@@ -29,7 +29,8 @@ for index, chunk in enumerate(chunks):
         embedding=embedding,
         metadata = {
             "source": "bedrock-ug.pdf",
-            "chunk_number": index
+            "chunk_number": index,
+            "page_range": "2500-2900"
         }
     )
 
