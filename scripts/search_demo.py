@@ -1,4 +1,4 @@
-from scripts.search_service import (
+from src.search_service import (
     semantic_search,
     display_results
 )
