@@ -106,10 +106,10 @@ python scripts/search_demo.py
 
 Example queries:
 
-What is Amazon Bedrock?
-What are Knowledge Bases?
-What is multimodal content?
-How does retrieval work?
+- What is Amazon Bedrock?
+- What are Knowledge Bases?
+- What is multimodal content?
+- How does retrieval work?
 
 ---
 
@@ -135,7 +135,7 @@ Add LLM layer (RAG system)
 Improve metadata granularity (page-level tracking)
 Build simple UI (optional)
 
--- 
+---
 
 ## Author Notes
 
