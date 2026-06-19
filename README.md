@@ -115,25 +115,26 @@ Example queries:
 
 ## Key Learnings
 
-Embeddings represent meaning, not keywords
-Vector similarity enables semantic search
-Chunking strategy affects retrieval quality
-Not all queries will return relevant results (no thresholding yet)
-Ranking depends on distance in embedding space
-Corpus quality directly impacts retrieval quality
+- Embeddings represent meaning, not keywords
+- Vector similarity enables semantic search
+- Chunking strategy affects retrieval quality
+- Not all queries will return relevant results (no thresholding yet)
+- Ranking depends on distance in embedding space
+- Corpus quality directly impacts retrieval quality
 
 ## Known Limitations
-No relevance threshold (irrelevant queries still return closest chunks)
-Chunking is fixed-size (no overlap strategy yet)
-No LLM-based answer generation (pure retrieval system)
-Limited evaluation of retrieval quality
+
+- No relevance threshold (irrelevant queries still return closest chunks)
+- Chunking is fixed-size (no overlap strategy yet)
+- No LLM-based answer generation (pure retrieval system)
+- Limited evaluation of retrieval quality
 
 ## Next Steps (Future Work)
-Add relevance threshold filtering
-Improve chunking strategy (overlap / semantic chunking)
-Add LLM layer (RAG system)
-Improve metadata granularity (page-level tracking)
-Build simple UI (optional)
+- Add relevance threshold filtering
+- Improve chunking strategy (overlap / semantic chunking)
+- Add LLM layer (RAG system)
+- Improve metadata granularity (page-level tracking)
+- Build simple UI (optional)
 
 ---
 
